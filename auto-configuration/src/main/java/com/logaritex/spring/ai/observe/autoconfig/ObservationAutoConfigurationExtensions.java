@@ -16,6 +16,8 @@
 
 package com.logaritex.spring.ai.observe.autoconfig;
 
+import com.logaritex.spring.ai.observe.ChatClientInputContentObservationFilter;
+import com.logaritex.spring.ai.observe.ChatClientPromptContentObservationFilter;
 import com.logaritex.spring.ai.observe.ChatModelCompletionObservationFilter;
 import com.logaritex.spring.ai.observe.ChatModelCompletionObservationHandler2;
 import com.logaritex.spring.ai.observe.ChatModelPromptContentObservationFilter;
@@ -43,9 +45,9 @@ import org.springframework.context.annotation.Configuration;
 @AutoConfiguration(
 		afterName = { "org.springframework.boot.actuate.autoconfigure.observation.ObservationAutoConfiguration" })
 @ConditionalOnClass(ChatModel.class)
-public class ChatObservationAutoConfigurationExt {
+public class ObservationAutoConfigurationExtensions {
 
-	private static final Logger logger = LoggerFactory.getLogger(ChatObservationAutoConfigurationExt.class);
+	private static final Logger logger = LoggerFactory.getLogger(ObservationAutoConfigurationExtensions.class);
 
 	public static final String CONFIG_PREFIX = "spring.ai.chat.observations";
 
@@ -109,6 +111,28 @@ public class ChatObservationAutoConfigurationExt {
 			return new ChatModelCompletionObservationFilter();
 		}
 
+	}
+
+	/**
+	 * @deprecated in favour of {@link #chatClientPromptContentObservationFilter()}.
+	 */
+	@Bean
+	@ConditionalOnMissingBean
+	@ConditionalOnProperty(prefix = "spring.ai.chat.client.observations", name = "include-input", havingValue = "true")
+	@Deprecated
+	ChatClientInputContentObservationFilter chatClientInputContentObservationFilter() {
+		logger.warn(
+				"You have enabled the inclusion of the input content in the observations, with the risk of exposing sensitive or private information. Please, be careful!");
+		return new ChatClientInputContentObservationFilter();
+	}
+
+	@Bean
+	@ConditionalOnMissingBean
+	@ConditionalOnProperty(prefix = "spring.ai.chat.client.observations", name = "include-prompt", havingValue = "true")
+	ChatClientPromptContentObservationFilter chatClientPromptContentObservationFilter() {
+		logger.warn(
+				"You have enabled the inclusion of the ChatClient prompt content in the observations, with the risk of exposing sensitive or private information. Please, be careful!");
+		return new ChatClientPromptContentObservationFilter();
 	}
 
 }
