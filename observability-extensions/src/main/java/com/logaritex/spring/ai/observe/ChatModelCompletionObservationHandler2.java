@@ -29,7 +29,6 @@ import org.springframework.ai.chat.observation.ChatModelObservationContext;
  * Handler for including the chat completion content in the observation as a span event.
  *
  * @author Thomas Vitale
- * @since 1.0.0
  */
 public class ChatModelCompletionObservationHandler2 implements ObservationHandler<ChatModelObservationContext> {
 

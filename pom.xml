@@ -9,16 +9,16 @@
 	<version>0.1.0-SNAPSHOT</version>
 
 	<packaging>pom</packaging>
-	<url>https://github.com/spring-ai-community/mcp-annotations</url>
+	<url>https://github.com/spring-ai-community/observability-extensions</url>
 
 	<scm>
-		<url>https://github.com/spring-ai-community/mcp-annotations</url>
-		<connection>git://github.com/spring-ai-community/mcp-annotations.git</connection>
-		<developerConnection>git@github.com/spring-ai-community/mcp-annotations.git</developerConnection>
+		<url>https://github.com/spring-ai-community/observability-extensions</url>
+		<connection>git://github.com/spring-ai-community/observability-extensions.git</connection>
+		<developerConnection>git@github.com/spring-ai-community/observability-extensions.git</developerConnection>
 	</scm>
 
-	<name>MCP Java SDK - Annotations Parent</name>
-	<description>This module enables developers to easily create and register methods for handling MCP operations using simple annotations</description>
+	<name>Spring AI Observability Extensions Parent</name>
+	<description>This module that provides Spring AI observability extensions</description>
 
 
 	<organization>
@@ -41,11 +41,11 @@
 
 	<issueManagement>
 		<system>Github Issues</system>
-		<url>https://github.com/spring-ai-community/mcp-annotations/issues</url>
+		<url>https://github.com/spring-ai-community/observability-extensions/issues</url>
 	</issueManagement>
 	<ciManagement>
 		<system>Github Actions</system>
-		<url>https://github.com/spring-ai-community/mcp-annotations/actions</url>
+		<url>https://github.com/spring-ai-community/observability-extensions/actions</url>
 	</ciManagement>
 
 	<properties>
@@ -57,8 +57,7 @@
 		<java.version>17</java.version>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
-
-		<mcp.java.sdk.version>0.10.0</mcp.java.sdk.version>
+		
 		<spring-ai.version>1.0.0-RC1</spring-ai.version>
 
 		<assert4j.version>3.26.3</assert4j.version>
@@ -94,7 +93,7 @@
 		<awaitility.version>4.2.0</awaitility.version>
 		<bnd-maven-plugin.version>7.1.0</bnd-maven-plugin.version>
 		<json-unit-assertj.version>4.1.0</json-unit-assertj.version>
-
+		<mockk-jvm.version>1.13.13</mockk-jvm.version>
 	</properties>
 
 	<modules>		

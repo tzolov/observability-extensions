@@ -11,15 +11,15 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>spring-ai-observability-extensions</artifactId>
+	<artifactId>observability-extensions</artifactId>
 	<packaging>jar</packaging>
 	<name>Spring AI Observability Extensions</name>
-	<url>https://github.com/spring-ai-community/mcp-annotations</url>
+	<url>https://github.com/spring-ai-community/observability-extensions</url>
 
 	<scm>
-		<url>https://github.com/spring-ai-community/mcp-annotations</url>
-		<connection>git://github.com/spring-ai-community/mcp-annotations.git</connection>
-		<developerConnection>git@github.com/spring-ai-community/mcp-annotations.git</developerConnection>
+		<url>https://github.com/spring-ai-community/observability-extensions</url>
+		<connection>git://github.com/spring-ai-community/observability-extensions.git</connection>
+		<developerConnection>git@github.com/spring-ai-community/observability-extensions.git</developerConnection>
 	</scm>
 
 	<dependencies>
@@ -40,16 +40,31 @@
 			<optional>true</optional>
 		</dependency>
 
-		<!-- <dependency>
-			<groupId>org.springframework.ai</groupId>
-			<artifactId>spring-ai-model</artifactId>
-			<version>${spring-ai.version}</version>
-		</dependency> -->
 		<dependency>
 			<groupId>org.springframework.ai</groupId>
 			<artifactId>spring-ai-client-chat</artifactId>
 			<version>${spring-ai.version}</version>
 		</dependency>
+
+				<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.module</groupId>
+			<artifactId>jackson-module-kotlin</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.mockk</groupId>
+			<artifactId>mockk-jvm</artifactId>
+			<version>${mockk-jvm.version}</version>
+			<scope>test</scope>
+		</dependency>
+
 
 	</dependencies>
 

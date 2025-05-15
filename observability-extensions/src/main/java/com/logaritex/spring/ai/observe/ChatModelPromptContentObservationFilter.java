@@ -26,7 +26,6 @@ import org.springframework.ai.chat.observation.ChatModelObservationContext;
  * An {@link ObservationFilter} to include the chat prompt content in the observation.
  *
  * @author Thomas Vitale
- * @since 1.0.0
  */
 public class ChatModelPromptContentObservationFilter implements ObservationFilter {
 
