@@ -98,7 +98,7 @@
 	</properties>
 
 	<modules>		
-		<module>spring-ai-observability-extensions</module>
+		<module>observability-extensions</module>
 		<module>auto-configuration</module>
 	</modules>
 
