@@ -1,7 +1,7 @@
 # Spring AI Chat Observation Auto Configuration Extensions
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Maven Central](https://img.shields.io/maven-central/v/com.logaritex.spring.ai/spring-ai-autoconfigure-model-chat-observation.svg)](https://search.maven.org/search?q=g:com.logaritex.spring.ai%20AND%20a:spring-ai-autoconfigure-model-chat-observation)
+[![Maven Central](https://img.shields.io/maven-central/v/com.logaritex.spring.ai/autoconfigure-observability-extensions.svg)](https://search.maven.org/search?q=g:com.logaritex.spring.ai%20AND%20a:autoconfigure-observability-extensions)
 
 ## Overview
 
@@ -21,7 +21,7 @@ This module provides Spring Boot auto-configuration for the Spring AI Observabil
 ```xml
 <dependency>
     <groupId>com.logaritex.spring.ai</groupId>
-    <artifactId>spring-ai-autoconfigure-model-chat-observation</artifactId>
+    <artifactId>autoconfigure-observability-extensions</artifactId>
     <version>${observability-extensions.version}</version>
 </dependency>
 ```

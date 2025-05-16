@@ -54,7 +54,7 @@ Add the following dependencies to your project:
 <!-- Auto-configuration for Spring Boot -->
 <dependency>
     <groupId>com.logaritex.spring.ai</groupId>
-    <artifactId>spring-ai-autoconfigure-model-chat-observation</artifactId>
+    <artifactId>autoconfigure-observability-extensions</artifactId>
     <version>${observability-extensions.version}</version>
 </dependency>
 ```

@@ -10,7 +10,8 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>spring-ai-autoconfigure-model-chat-observation</artifactId>
+	<artifactId>autoconfigure-observability-extensions</artifactId>
+	
 	<packaging>jar</packaging>
 	<name>Spring AI Chat Observation Auto Configuration Extensions</name>
 	<description>Spring AI Chat Observation Auto Configuration Extensions</description>
